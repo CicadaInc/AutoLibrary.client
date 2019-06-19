@@ -31,6 +31,9 @@
 font: 75 11pt &quot;Levenim MT&quot;;</string>
     </property>
     <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
      <string>Заглавие</string>
     </property>
    </widget>
@@ -48,6 +51,15 @@ font: 75 11pt &quot;Levenim MT&quot;;</string>
 font: 75 11pt &quot;Levenim MT&quot;;</string>
     </property>
     <property name="text">
+     <string notr="true"/>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
      <string>Автор</string>
     </property>
    </widget>
@@ -65,6 +77,9 @@ font: 75 11pt &quot;Levenim MT&quot;;</string>
 font: 75 11pt &quot;Levenim MT&quot;;</string>
     </property>
     <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
      <string>Издательство</string>
     </property>
    </widget>
@@ -82,7 +97,10 @@ font: 75 11pt &quot;Levenim MT&quot;;</string>
 font: 75 11pt &quot;Levenim MT&quot;;</string>
     </property>
     <property name="text">
-     <string>Место</string>
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Город издания</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="publication_date">
@@ -99,6 +117,9 @@ font: 75 11pt &quot;Levenim MT&quot;;</string>
 font: 75 11pt &quot;Levenim MT&quot;;</string>
     </property>
     <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
      <string>Год издания</string>
     </property>
    </widget>
@@ -116,6 +137,9 @@ font: 75 11pt &quot;Levenim MT&quot;;</string>
 font: 75 11pt &quot;Levenim MT&quot;;</string>
     </property>
     <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
      <string>Издание</string>
     </property>
    </widget>
@@ -133,6 +157,9 @@ font: 75 11pt &quot;Levenim MT&quot;;</string>
 font: 75 11pt &quot;Levenim MT&quot;;</string>
     </property>
     <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
      <string>Рекомендация</string>
     </property>
    </widget>
@@ -166,10 +193,13 @@ font: 75 11pt &quot;Levenim MT&quot;;</string>
 font: 75 11pt &quot;Levenim MT&quot;;</string>
     </property>
     <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
      <string>Количество поступивших книг</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="create_barcodes">
+   <widget class="QPushButton" name="pushCreate_barcodes">
     <property name="geometry">
      <rect>
       <x>40</x>

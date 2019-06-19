@@ -6,6 +6,8 @@ from PyQt5.QtWidgets import (QMainWindow, QLabel, QApplication)
 from PyQt5.QtCore import *
 from PyQt5 import uic
 import sys
+from BAR import BarcodeGenerator
+import random
 
 
 # Main menu
@@ -23,7 +25,7 @@ class MainMenu(QMainWindow):
         # Загрузка GUI
         uic.loadUi('GUI/Main_menu.ui', self)
 
-        self.create_barcodes_menu.clicked.connect(lambda: show_window(self, creatingWin))
+        self.pushCreate_barcodes_menu.clicked.connect(lambda: show_window(self, creatingWin))
 
         self.show()
 
@@ -49,12 +51,48 @@ class Creating(QMainWindow):
 
         self.error.hide()
 
-        # self.pushStart.clicked.connect(lambda: show_window(self, startWin))
+        self.pushCreate_barcodes.clicked.connect(self.generateBarCodes)
 
         self.show()
 
     def keyPressEvent(self, e):
         if e.key() == Qt.Key_Escape:
+            show_window(self, mainWin)
+
+    # this function activates after clicking "Создать штрих коды" and generates bar codes
+    def generateBarCodes(self):
+        number_of_books = int(self.number_of_books.text())
+
+        bar = BarcodeGenerator('ean13')
+        for i in range(number_of_books):
+            # !!! need to compare with the database
+            id_of_book = str(random.randint(1000000000000, 9999999999999))
+            bar.generate_barcode(id_of_book, id_of_book)
+
+        show_window(self, confirmationWin)
+
+
+class Confirmation(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setFixedSize(350, 130)
+        self.setWindowTitle('AutoLibrary')
+        self.init_UI()
+
+    def init_UI(self):
+        # LOAD IMAGE
+        set_background(self)
+
+        # Загрузка GUI
+        uic.loadUi('GUI/confirmation_win.ui', self)
+
+        self.pushYes.clicked.connect(lambda: show_window(self, mainWin))
+        # self.pushNo.clicked.connect(lambda: show_window(self, mainWin))
+
+        self.show()
+
+    def keyPressEvent(self, e):
+        if e.key() == Qt.Key_Y:
             show_window(self, mainWin)
 
 
@@ -79,4 +117,6 @@ if __name__ == '__main__':
     mainWin = MainMenu()
     creatingWin = Creating()
     creatingWin.hide()
+    confirmationWin = Confirmation()
+    confirmationWin.hide()
     sys.exit(app.exec_())

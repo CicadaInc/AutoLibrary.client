@@ -18,7 +18,7 @@
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="create_barcodes_menu">
+   <widget class="QPushButton" name="pushCreate_barcodes_menu">
     <property name="geometry">
      <rect>
       <x>40</x>

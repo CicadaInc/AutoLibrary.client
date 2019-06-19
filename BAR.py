@@ -18,7 +18,7 @@ class BarcodeGenerator:
     def generate_barcode(self, code, filename):
         try:
             barcode_to_print = self.TYPE(code, writer=ImageWriter())
-            barcode_to_print.save(filename)
+            barcode_to_print.save("barcodes/" + filename)
             return True
 
         except Exception as error:
