@@ -1,4 +1,5 @@
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog
+from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5 import uic
 
 import sys
@@ -12,6 +13,8 @@ class MainWindow(QMainWindow):
         super().__init__()
         uic.loadUi("main.ui", self)
         self.setWindowTitle("AutoLibrary")
+        self.setFixedSize(350, 115)
+        self.setWindowIcon(QIcon(QPixmap('icon.png')))
 
         self.ean = None
         self.bar_codes = None
@@ -42,6 +45,9 @@ class MainWindow(QMainWindow):
             self.infoLabel.setText("Выбран неверный файл конфигурации")
 
     def print_labels(self):
+
+        print(self.fileNameLabel.text())
+
         tsc_lib = ctypes.WinDLL("TSCLIB.dll")
 
         tsc_lib.openportW("TSC Alpha-2R")

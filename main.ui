@@ -6,66 +6,78 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>325</width>
-    <height>208</height>
+    <width>350</width>
+    <height>110</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(220, 237, 231);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="chooseFileBut">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>120</y>
-      <width>101</width>
-      <height>51</height>
+      <x>280</x>
+      <y>30</y>
+      <width>60</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Levenim MT</family>
+      <pointsize>11</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
-    <property name="text">
-     <string>Выбрать файл</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="fileNameLabel">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>60</y>
-      <width>151</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(38, 0, 61);
+font: 75 11pt &quot;Levenim MT&quot;;
+background-color: rgb(234, 245, 237);
+border-radius: 1px;
+border: 1px solid #26003d;
+box-shadow: 4px 4px 4px rgba(8, 8, 8, 0.5)}
+QPushButton:hover {background-color: rgba(200, 229, 225, 0.7); 
+border: 1px solid #26003d;
+</string>
     </property>
     <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>View</string>
     </property>
    </widget>
    <widget class="QPushButton" name="printBut">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>120</y>
-      <width>101</width>
-      <height>51</height>
+      <x>15</x>
+      <y>60</y>
+      <width>325</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Levenim MT</family>
+      <pointsize>12</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(38, 0, 61);
+font: 75 12pt &quot;Levenim MT&quot;;
+background-color: rgb(234, 245, 237);
+border-radius: 1px;
+border: 1px solid #26003d;
+box-shadow: 4px 4px 4px rgba(8, 8, 8, 0.5)}
+QPushButton:hover {background-color: rgba(200, 229, 225, 0.7); 
+border: 1px solid #26003d;
+</string>
     </property>
     <property name="text">
      <string>Распечатать</string>
@@ -74,22 +86,43 @@
    <widget class="QLabel" name="infoLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>311</width>
-      <height>51</height>
+      <x>5</x>
+      <y>0</y>
+      <width>331</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Levenim MT</family>
+      <pointsize>11</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;Levenim MT&quot;;</string>
+    </property>
     <property name="text">
-     <string>Выберите файл конфигурации с расширением txt</string>
+     <string>Выберите файл конфигурации формата *.txt</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fileNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>30</y>
+      <width>261</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 75 10pt &quot;Levenim MT&quot;;</string>
     </property>
    </widget>
   </widget>
@@ -98,7 +131,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>325</width>
+     <width>350</width>
      <height>21</height>
     </rect>
    </property>
