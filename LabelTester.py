@@ -94,6 +94,7 @@ class LabelTester(QtWidgets.QMainWindow, uic.loadUiType("LabelTester.ui")[0]):
                 self.name_value.setText(data.iloc[0, 1])
                 self.author_value.setText(data.iloc[0, 3])
                 self.code_value.setText(str(data.iloc[0, 0]))
+                self.year_value.setText(str(data.iloc[0, 5]))
                 if len(data) > 1:
                     self.error_label.setText('DUPLICATE DETECTED')
                 else:
@@ -109,6 +110,7 @@ class LabelTester(QtWidgets.QMainWindow, uic.loadUiType("LabelTester.ui")[0]):
                 self.name_value.setText('#')
                 self.author_value.setText('#')
                 self.code_value.setText(str(bid))
+                self.year_value.setText('#')
 
     def load_db(self):
         self.status_label.setText('#')
