@@ -91,8 +91,8 @@ class LabelTester(QtWidgets.QMainWindow, uic.loadUiType("LabelTester.ui")[0]):
                 self.id_input.setText('')
             data = self.db[self.db.iloc[:, 0] == bid]
             if not data.empty:
-                self.name_value.setText(data.iloc[0, 1])
-                self.author_value.setText(data.iloc[0, 3])
+                self.name_value.setText(str(data.iloc[0, 1]))
+                self.author_value.setText(str(data.iloc[0, 3]))
                 self.code_value.setText(str(data.iloc[0, 0]))
                 self.year_value.setText(str(data.iloc[0, 5]))
                 if len(data) > 1:
